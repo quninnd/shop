@@ -99,9 +99,9 @@ export default {
   .logo {
     position: absolute;
     left: 50%;
-    width: 130px;
-    height: 130px;
-    transform: translate(-50%, -50%);
+    width: 110px;
+    height: 110px;
+    transform: translate(-50%, -70%);
     border-radius: 50%;
     overflow: hidden;
     background-color: #fff;
