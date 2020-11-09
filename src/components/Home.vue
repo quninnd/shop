@@ -39,7 +39,7 @@
                 <!-- 主体区域 -->
                 <el-container>
                     <el-main>
-                        <h1>欢迎!!!</h1>
+                        <router-view></router-view>
                     </el-main>
                 </el-container>
             </el-container>
@@ -66,7 +66,7 @@ export default {
     // console.log(res)
     if (res.meta.status !== 200) return this.$message.error('获取权限菜单栏失败')
     this.rightsData = res.data
-    console.log(res.data)
+    // console.log(res.data)
     // 这是二级菜单的索引 表示默认打开的颜色
     sessionStorage.setItem('activeIndex', '')
   },
