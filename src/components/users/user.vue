@@ -312,8 +312,9 @@ export default {
         // console.log(res)
         if (res.meta.msg === '用户名已存在') return this.$message.error('用户名已存在,创建失败')
         this.$message.success('添加用户成功!')
-        this.getList()
         this.addBtnFlag = false
+        this.$refs.addUserForm.resetFields()
+        this.getList()
       })
     },
     // 修改按钮 发起请求获取该用户的数据
