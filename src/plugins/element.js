@@ -23,10 +23,12 @@ import {
   Alert,
   Tooltip,
   Select,
-  Option
+  Option,
+  MessageBox
 } from 'element-ui'
 
 Vue.prototype.$message = Message
+Vue.prototype.$confirm = MessageBox.confirm
 
 Vue.use(Option)
 Vue.use(Select)
