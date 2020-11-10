@@ -4,7 +4,7 @@
             <!-- 头部 -->
             <el-header>
                 <span class="logo">
-                    <img src="../assets/img/heima.png" alt="">
+                    <img src="../assets/img/heima.png" alt="" @click="toWel">
                     <span>电商后台管理系统</span>
                 </span>
                 <span>
@@ -17,7 +17,7 @@
                     <div class="collapse" @click="collapse">|||</div>
                     <!-- 侧边栏的容器 -->
                     <el-menu :default-active="activeIndex" :collapse-transition="false" :collapse="collapseFlag"
-                        background-color="#333744" text-color="#fff" active-text-color="409EFF" :unique-opened="true" router>
+                        background-color="#333744" text-color="#fff" active-text-color="#409EFF" :unique-opened="true" router>
                                  <!-- 一级菜单 -->
                             <el-submenu v-for="(item,index) in rightsData" :key="item.id" :index="item.id.toString()">
                                 <!-- 一级菜单的模板区域 -->
@@ -68,7 +68,7 @@ export default {
     this.rightsData = res.data
     // console.log(res.data)
     // 这是二级菜单的索引 表示默认打开的颜色
-    sessionStorage.setItem('activeIndex', '')
+    sessionStorage.setItem('activeIndex', 'users')
   },
 
   methods: {
@@ -85,6 +85,12 @@ export default {
     // 控制菜单折叠
     collapse () {
       this.collapseFlag = !this.collapseFlag
+    },
+    // 点击图片跳转到welcome页面的函数
+    toWel () {
+    //   location.assign('http://localhost:8080/#/welcome')
+      this.$router.push('/welcome')
+      sessionStorage.removeItem('activeIndex')
     }
   }
 }
@@ -119,6 +125,10 @@ export default {
         font-size: 20px;
     }
 
+    .logo img {
+        cursor: pointer!important;
+    }
+
     .el-aside {
         background-color: #333744;
     }
@@ -132,9 +142,6 @@ export default {
     }
     .iconfont {
         margin-right: 8px!important;
-    }
-    .el-main {
-        text-align: center;
     }
     .collapse {
         user-select: none;

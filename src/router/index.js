@@ -3,8 +3,14 @@ import VueRouter from 'vue-router'
 import Login from '../components/login'
 import Home from '../components/Home'
 import Welcome from '../components/welcome'
+import Users from '../components/users/user'
 
 Vue.use(VueRouter)
+
+const originalReplace = VueRouter.prototype.replace
+VueRouter.prototype.replace = function replace (location) {
+  return originalReplace.call(this, location).catch(err => err)
+}
 
 const routes = [
   { path: '/', component: Login },
@@ -13,7 +19,8 @@ const routes = [
     component: Home,
     redirect: '/welcome',
     children: [
-      { path: '/welcome', component: Welcome }
+      { path: '/welcome', component: Welcome },
+      { path: '/users', component: Users }
     ]
   }
 ]

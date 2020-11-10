@@ -66,7 +66,7 @@ export default {
         // 登录成功，保存token字符串，并跳转页面
         this.$message.success('登录成功！')
         sessionStorage.setItem('token', res.data.token)
-        this.$router.push('/home')
+        this.$router.push('/users')
       })
     }
   }

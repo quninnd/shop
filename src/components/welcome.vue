@@ -23,5 +23,7 @@ export default {
 </script>
 
 <style scoped lang='less'>
-
+h1 {
+  text-align: center;
+}
 </style>
