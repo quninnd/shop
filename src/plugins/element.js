@@ -24,12 +24,20 @@ import {
   Tooltip,
   Select,
   Option,
-  MessageBox
+  MessageBox,
+  Row,
+  Col,
+  Tag,
+  Tree
 } from 'element-ui'
 
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
 
+Vue.use(Tree)
+Vue.use(Tag)
+Vue.use(Col)
+Vue.use(Row)
 Vue.use(Option)
 Vue.use(Select)
 Vue.use(Button)
