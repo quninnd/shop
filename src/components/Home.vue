@@ -126,7 +126,6 @@ export default {
     }
 
     .el-main {
-      overflow: hidden;
         background-color: #eaedf1;
     }
     .el-menu {
