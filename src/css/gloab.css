@@ -3,4 +3,8 @@ html,body,#app {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-width: 1200px;
+}
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+  background: skyblue !important;
 }
