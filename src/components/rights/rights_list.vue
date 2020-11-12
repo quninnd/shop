@@ -54,5 +54,9 @@ export default {
 <style scoped lang='less'>
 .el-card {
   margin-top: 10px;
+  overflow: hidden;
+}
+.el-table {
+  overflow: hidden!important;
 }
 </style>
