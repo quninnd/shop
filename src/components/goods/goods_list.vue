@@ -19,7 +19,7 @@
           </el-input>
         </div>
         <!-- 添加用户按钮 -->
-        <el-button type="primary">添加用户</el-button>
+        <el-button type="primary" @click="addGood">添加商品</el-button>
       </div>
     <!-- ---------------------------------------------------------------- -->
     <!-- 表格区域 -->
@@ -93,7 +93,7 @@ export default {
     /// 获取商品列表的函数
     async getGoodsList () {
       const { data: res } = await this.$http.get('goods', { params: this.allSet })
-      console.log(res)
+      // console.log(res)
       if (res.meta.status !== 200) return this.$message.error('获取商品列表失败！')
       if (res.data.goods.length === 0) return this.$message.warning('未查询到该商品')
       this.pagenum = res.data.pagenum
@@ -151,6 +151,9 @@ export default {
           message: '已取消删除'
         })
       })
+    },
+    addGood () {
+      this.$router.push('addGood')
     }
   }
 }

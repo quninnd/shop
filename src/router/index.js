@@ -7,7 +7,14 @@ import Users from '../components/users/user'
 import Roles from '../components/rights/rights_role'
 import RightsList from '../components/rights/rights_list'
 import GoodsList from '../components/goods/goods_list'
+import addGood from '../components/goods/addGood'
+// 导入富文本编辑器及其相关样式
+import quillEditor from 'vue-quill-editor' // 调用编辑器
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
 
+Vue.use(quillEditor)
 Vue.use(VueRouter)
 
 const originalReplace = VueRouter.prototype.replace
@@ -26,7 +33,8 @@ const routes = [
       { path: '/users', component: Users },
       { path: '/roles', component: Roles },
       { path: '/rights', component: RightsList },
-      { path: '/goods', component: GoodsList }
+      { path: '/goods', component: GoodsList },
+      { path: '/addGood', component: addGood }
     ]
   }
 ]

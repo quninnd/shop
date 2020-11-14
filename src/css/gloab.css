@@ -8,3 +8,6 @@ html,body,#app {
 .el-table--enable-row-hover .el-table__body tr:hover>td {
   background: skyblue !important;
 }
+.ql-editor {
+  height: 300px;
+}

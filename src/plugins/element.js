@@ -28,12 +28,28 @@ import {
   Row,
   Col,
   Tag,
-  Tree
+  Tree,
+  Step,
+  Steps,
+  Tabs,
+  TabPane,
+  Cascader,
+  Checkbox,
+  CheckboxGroup,
+  Upload
 } from 'element-ui'
 
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
 
+Vue.use(Upload)
+Vue.use(Checkbox)
+Vue.use(CheckboxGroup)
+Vue.use(Cascader)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(Steps)
+Vue.use(Step)
 Vue.use(Tree)
 Vue.use(Tag)
 Vue.use(Col)
