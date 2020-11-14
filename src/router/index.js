@@ -8,6 +8,7 @@ import Roles from '../components/rights/rights_role'
 import RightsList from '../components/rights/rights_list'
 import GoodsList from '../components/goods/goods_list'
 import addGood from '../components/goods/addGood'
+import GoodCategories from '../components/goods/goods_categories'
 // 导入富文本编辑器及其相关样式
 import quillEditor from 'vue-quill-editor' // 调用编辑器
 import 'quill/dist/quill.core.css'
@@ -34,7 +35,8 @@ const routes = [
       { path: '/roles', component: Roles },
       { path: '/rights', component: RightsList },
       { path: '/goods', component: GoodsList },
-      { path: '/addGood', component: addGood }
+      { path: '/addGood', component: addGood },
+      { path: '/categories', component: GoodCategories }
     ]
   }
 ]

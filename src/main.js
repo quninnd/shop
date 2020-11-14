@@ -5,7 +5,10 @@ import './css/gloab.css'
 import '../public/fonts/iconfont.css'
 import './plugins/element.js'
 import axios from 'axios'
+// 格子树形表格
+import ZkTable from 'vue-table-with-tree-grid'
 
+Vue.component('tree-table', ZkTable)
 Vue.config.productionTip = false
 
 const token = sessionStorage.getItem('token')
