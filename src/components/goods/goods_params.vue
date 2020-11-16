@@ -327,7 +327,7 @@ export default {
         attr_sel: this.activeName,
         attr_vals: row.attr_vals.join(' ')
       })
-      console.log(res)
+      // console.log(res)
       if (res.meta.status !== 200) return this.$message.error('添加参数失败!')
       this.$message.success('更新参数成功!')
       row.inputValue = ''
