@@ -33,7 +33,10 @@
         </el-table-column>
         <el-table-column prop="goods_weight" label="商品质量" width="95">
         </el-table-column>
-        <el-table-column prop="add_time" label="创建时间" width="140">
+        <el-table-column label="创建时间" width="230">
+          <template slot-scope="rowData">
+            {{rowData.row.add_time | dataFilter}}
+          </template>
         </el-table-column>
         <!-- 操作 -->
         <el-table-column prop="address" label="操作" width="200">
@@ -49,6 +52,7 @@
     <!-- 分页 -->
     <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="allSet.pagenum"
       :page-sizes="[5, 10, 20, 50]" :page-size="allSet.pagesize" layout="total, sizes, prev, pager, next, jumper"
+      background
       :total="total">
     </el-pagination>
     </el-card>
@@ -79,14 +83,14 @@ export default {
   },
   filters: {
     dataFilter (date) {
-      console.log(date)
+      date = new Date(date * 1000)
       const year = date.getFullYear()
       const month = (date.getMonth() + 1).toString().padStart(2, '0')
       const day = date.getDay().toString().padStart(2, '0')
       const hour = date.getHours().toString().padStart(2, '0')
       const minute = date.getMinutes().toString().padStart(2, '0')
       const second = date.getSeconds().toString().padStart(2, '0')
-      return `${year}年${month}月${day}日 ${hour}:${minute}:${second}58`
+      return `${year}年${month}月${day}日 ${hour}:${minute}:${second}`
     }
   },
   methods: {

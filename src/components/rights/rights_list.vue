@@ -44,7 +44,7 @@ export default {
     // 获取权限列表的函数
     async getRightsList () {
       const { data: res } = await this.$http.get('/rights/list')
-      console.log(res.data)
+      // console.log(res.data)
       this.rightsList = res.data
     }
   }
