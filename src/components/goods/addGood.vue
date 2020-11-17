@@ -224,7 +224,7 @@ export default {
       // 如果移除了，相应的存放图片路径的数组也要移除这个图片数据
       const path = res.response.data.tmp_path
       const index = this.formData.pics
-        .forEach(p => p.pic === path)
+        .findindex(p => p.pic === path)
       this.formData.pics.splice(index, 1)
     },
     // 图片上传成功时触发的钩子
@@ -273,6 +273,7 @@ export default {
   width: 70%;
 }
 .el-card {
+  user-select: none;
   margin-top: 10px;
 }
 .el-alert {
