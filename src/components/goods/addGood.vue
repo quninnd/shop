@@ -19,7 +19,7 @@
           <el-step title="完成"></el-step>
         </el-steps>
         <!-- 基本信息的form表单 -->
-        <el-form :model="formData" :rules="formRules" ref="formData" label-width="100px" class="demo-ruleForm">
+        <el-form :model="formData" label-position="top" :rules="formRules" ref="formData" label-width="100px" class="demo-ruleForm">
           <!-- 竖型tab -->
           <el-tabs tab-position="left" style="height: auto;" v-model="actIndex" :before-leave="allowChange" @tab-click="tabChange">
           <!--  -->
@@ -291,17 +291,16 @@ export default {
 .el-checkbox {
   margin: 0 8px;
 }
-/deep/.el-form-item__label {
-  width: 200px!important;
+::v-deep .el-form-item__label {
   text-align: left;
 }
-/deep/.el-form-item__content {
+::v-deep.el-form-item__content {
   margin-left: 0 !important;
 }
 img {
   width: 100%;
 }
-/deep/.btn {
+::v-deep .btn {
   margin-top: 10px;
 }
 </style>

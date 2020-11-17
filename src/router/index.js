@@ -10,6 +10,7 @@ import GoodsList from '../components/goods/goods_list'
 import addGood from '../components/goods/addGood'
 import GoodCategories from '../components/goods/goods_categories'
 import GoodParams from '../components/goods/goods_params'
+import Orders from '../components/orders/orders'
 // 导入富文本编辑器及其相关样式
 import quillEditor from 'vue-quill-editor' // 调用编辑器
 import 'quill/dist/quill.core.css'
@@ -38,7 +39,8 @@ const routes = [
       { path: '/goods', component: GoodsList },
       { path: '/addGood', component: addGood },
       { path: '/categories', component: GoodCategories },
-      { path: '/params', component: GoodParams }
+      { path: '/params', component: GoodParams },
+      { path: '/orders', component: Orders }
     ]
   }
 ]
