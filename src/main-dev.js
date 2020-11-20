@@ -5,11 +5,18 @@ import './css/gloab.css'
 import '../public/fonts/iconfont.css'
 import './plugins/element.js'
 import axios from 'axios'
+// 导入富文本编辑器及其相关样式
+import quillEditor from 'vue-quill-editor' // 调用编辑器
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
 // 格子树形表格
 import ZkTable from 'vue-table-with-tree-grid'
 // 导入进度条效果
 import Nprogress from 'nprogress'
 import 'nprogress/nprogress.css' // 样式必须引入
+
+Vue.use(quillEditor)
 
 Vue.component('tree-table', ZkTable)
 Vue.config.productionTip = false

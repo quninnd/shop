@@ -251,7 +251,7 @@ export default {
     // 获取用户数据的函数
     async getList () {
       const { data: res } = await this.$http.get('users', { params: this.allSet })
-      // console.log(res)
+      console.log(res)
       if (res.meta.status !== 200) return this.$message.error('获取管理员列表失败!')
       // 成功拿到数据  开始赋值 总数 当前页码数  用户数据
       this.usersData = res.data.users
