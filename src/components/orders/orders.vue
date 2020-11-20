@@ -94,7 +94,7 @@
 
 <script>
 // 导入国家省市区的资源
-import cityOptions from '../../plugins/city_data2017_element'
+import cityOptions from '../../plugins/citydata'
 export default {
   data () {
     return {
